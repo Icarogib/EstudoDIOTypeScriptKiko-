@@ -27,6 +27,9 @@ let listId = '7101979';
 let loginButton = document.getElementById('login-button');
 let searchButton = document.getElementById('search-button');
 let searchContainer = document.getElementById('search-container');
+let pass = document.getElementById('senha');
+let usr = document.getElementById('login');
+let apiK = document.getElementById('api-key');
 if (loginButton)
     loginButton.addEventListener('click', () => __awaiter(void 0, void 0, void 0, function* () {
         yield criarRequestToken();
@@ -52,19 +55,21 @@ if (searchButton)
         searchContainer === null || searchContainer === void 0 ? void 0 : searchContainer.appendChild(ul);
     }));
 function preencherSenha() {
-    let password1 = document.getElementById('senha').value;
-    validateLoginButton();
+    if (pass) {
+        password = pass.value;
+        validateLoginButton();
+    }
 }
 function preencherLogin() {
-    username = document.getElementById('login').value;
+    username = usr.value;
     validateLoginButton();
 }
 function preencherApi() {
-    apiKey = document.getElementById('api-key').value;
+    apiKey = apiK.value;
     validateLoginButton();
 }
 function validateLoginButton() {
-    if (password1 && username && apiKey) {
+    if (password && username && apiKey) {
         loginButton.disabled = false;
     }
     else {

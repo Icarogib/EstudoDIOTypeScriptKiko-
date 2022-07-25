@@ -22,6 +22,10 @@ let loginButton = document.getElementById('login-button');
 let searchButton = document.getElementById('search-button');
 let searchContainer = document.getElementById('search-container');
 
+let pass = document.getElementById('senha') as HTMLInputElement;
+let usr = document.getElementById('login') as HTMLInputElement;
+let apiK = document.getElementById('api-key') as HTMLInputElement;
+
 if(loginButton)
     loginButton.addEventListener('click', async () => {
     await criarRequestToken();
@@ -49,22 +53,24 @@ if(searchButton)
     })
 
 function preencherSenha() {
-  let password1 = document.getElementById('senha').value;
-  validateLoginButton();
+  if(pass){
+    password = pass.value;
+    validateLoginButton();
+    }
 }
 
 function preencherLogin() {
-  username =  document.getElementById('login').value;
+  username = usr.value;
   validateLoginButton();
 }
 
 function preencherApi() {
-  apiKey = document.getElementById('api-key').value;
+  apiKey = apiK.value;
   validateLoginButton();
 }
 
 function validateLoginButton() {
-  if (password1 && username && apiKey) {
+  if (password && username && apiKey) {
     loginButton.disabled = false;
   } else {
     loginButton.disabled = true;
