@@ -1,0 +1,25 @@
+{
+  "name": "estudodiotypescriptkiko-",
+  "version": "1.0.0",
+  "description": "_By: Icarogib_ </br> Desafios da DIO em TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc --watch",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Icarogib/EstudoDIOTypeScriptKiko-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Icarogib/EstudoDIOTypeScriptKiko-/issues"
+  },
+  "homepage": "https://github.com/Icarogib/EstudoDIOTypeScriptKiko-#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1",
+    "typescript": "^4.7.4"
+  }
+}
